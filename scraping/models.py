@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 # Create your models here.
 class Job(models.Model):
     url = models.CharField(max_length=255, unique=True)
@@ -11,8 +12,10 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+
     class Meta:
         ordering = ['title']
         db_table = 'jobs'
+
     class Admin:
         pass
